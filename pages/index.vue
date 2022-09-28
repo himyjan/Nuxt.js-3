@@ -2,6 +2,14 @@
 const num1 = ref(100);
 const { count } = useAddCount();
 
+// const { data, pending, error, refresh } = await useAsyncData('mountains', () =>
+//   $fetch('https://api.nuxtjs.dev/mountains')
+// );
+
+const { data, pending, error, refresh } = await useFetch(
+  'https://api.nuxtjs.dev/mountains'
+);
+
 onMounted(() => {
   setInterval(() => {
     num1.value++;
@@ -19,4 +27,11 @@ onMounted(() => {
   <Card />
   <Todo />
   <div class="text-[#000000] text-[30px]">{{ count }}</div>
+  <div
+    class="text-[#000000] text-[30px]"
+    v-for="item in data"
+    :key="item.title"
+  >
+    {{ item }}
+  </div>
 </template>
