@@ -2,6 +2,21 @@
 
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
+## setup tailwindcss-intellisense
+```.vscode/settings.json or in vscode settings```
+```
+{
+  "css.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "vue": "html",
+    "vue-html": "html"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  }
+}
+```
+
 ## Setup
 
 Make sure to install the dependencies:
