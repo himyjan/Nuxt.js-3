@@ -1,6 +1,7 @@
 <script setup>
 const num1 = ref(100);
-const { count } = useAddCount();
+const num2 = ref(0);
+const { count } = useAddCount(num2.value);
 
 // const { data, pending, error, refresh } = await useAsyncData('mountains', () =>
 //   $fetch('https://api.nuxtjs.dev/mountains')
