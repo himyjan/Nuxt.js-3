@@ -29,17 +29,27 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="text-orange-500 text-[50px]">index</div>
-  <div class="text-[#000000] text-[30px]">{{ num1 }}</div>
+  <div class="text-orange-500 text-[50px]">
+    index
+  </div>
+  <div class="text-[#000000] text-[30px]">
+    {{ num1 }}
+  </div>
   <Card />
   <Todo />
-  <div class="text-[#000000] text-[30px]">{{ count }}</div>
-  <div class="text-[#000000] text-[30px]">{{ num2 }}</div>
-  <button @click="increment">Add 1</button>
+  <div class="text-[#000000] text-[30px]">
+    {{ count }}
+  </div>
+  <div class="text-[#000000] text-[30px]">
+    {{ num2 }}
+  </div>
+  <button @click="increment">
+    Add 1
+  </button>
   <div
-    class="text-[#000000] text-[30px]"
     v-for="item in data"
     :key="item.title"
+    class="text-[#000000] text-[30px]"
   >
     {{ item }}
   </div>
