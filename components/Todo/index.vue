@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PhotoItems from './PhotoItems.vue';
+import PhotoItems from './PhotoItems.vue'
 </script>
 
 <template>

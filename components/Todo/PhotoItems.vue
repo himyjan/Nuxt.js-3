@@ -1,3 +1,5 @@
 <template>
-  <div class="text-[30px]">Todo Photo</div>
+  <div class="text-[30px]">
+    Todo Photo
+  </div>
 </template>
