@@ -8,3 +8,10 @@ export const myStore = defineStore({
     };
   },
 });
+
+// Composing Stores
+export const myStore2 = defineStore('my-store2', () => {
+  return {
+    isReady: false,
+  };
+});
