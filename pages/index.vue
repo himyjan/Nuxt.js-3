@@ -28,16 +28,14 @@ onMounted(() => {
   }
 
   store.$patch({
-    isReady: true
+    isReady: true,
   });
 });
 </script>
 
 <template>
   <div class="">
-    <div class="text-orange-500 text-[50px]">
-      index
-    </div>
+    <div class="text-orange-500 text-[50px]">index</div>
     <div class="text-[#000000] text-[30px]">
       {{ num1 }}
     </div>
@@ -49,12 +47,10 @@ onMounted(() => {
     <div class="text-[#000000] text-[30px]">
       {{ num2 }}
     </div>
-    <button @click="increment">
-      Add 1
-    </button>
+    <button @click="increment">Add 1</button>
     <div
       v-for="item in data"
-      :key="item.slug"
+      :key="item.title"
       class="text-[#000000] text-[30px]"
     >
       {{ item }}
