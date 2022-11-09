@@ -1,6 +1,6 @@
 import { Config } from 'tailwindcss';
 
-export default <Config>{
+export default <Partial<Config>>{
   content: [
     './app.{js,ts,vue}',
     './App.{js,ts,vue}',
