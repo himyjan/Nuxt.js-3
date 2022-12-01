@@ -1,6 +1,6 @@
-<script setup>
-const num1 = ref(100);
-const num2 = ref(0);
+<script setup lang="ts">
+const num1 = ref<number>(100);
+const num2 = ref<number>(0);
 const { count } = useAddCount(num2.value);
 const store = myStore();
 
@@ -8,7 +8,7 @@ const increment = () => {
   num2.value++;
 };
 
-const props = defineProps({ data: { type: Object, default: () => {} } });
+const props = defineProps({ data: { type: Object, default: () => { } } });
 
 // const { data, pending, error, refresh } = await useAsyncData('mountains', () =>
 //   $fetch('https://api.nuxtjs.dev/mountains')
@@ -35,7 +35,9 @@ onMounted(() => {
 
 <template>
   <div class="">
-    <div class="text-orange-500 text-[50px]">index</div>
+    <div class="text-orange-500 text-[50px]">
+      index
+    </div>
     <div class="text-[#000000] text-[30px]">
       {{ num1 }}
     </div>
@@ -47,12 +49,10 @@ onMounted(() => {
     <div class="text-[#000000] text-[30px]">
       {{ num2 }}
     </div>
-    <button @click="increment">Add 1</button>
-    <div
-      v-for="item in data"
-      :key="item.title"
-      class="text-[#000000] text-[30px]"
-    >
+    <button @click="increment">
+      Add 1
+    </button>
+    <div v-for="item in data" :key="item.title" class="text-[#000000] text-[30px]">
       {{ item }}
     </div>
     <div class="text-[#000000] text-[30px]">
