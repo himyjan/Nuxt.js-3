@@ -9,7 +9,7 @@
     "lint": "eslint --ext .ts,.js,.vue ."
   },
   "dependencies": {
-    "@formkit/auto-animate": "1.0.0-beta.6"
+    "@formkit/auto-animate": "^1.0.0-beta.6"
   },
   "devDependencies": {
     "@nuxt/content": "^2.5.2",
