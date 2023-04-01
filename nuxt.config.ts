@@ -8,10 +8,6 @@ export default defineNuxtConfig({
   ],
   typescript: {
     strict: true,
-    typeCheck: {
-      eslint: {
-        files: './**/*.{ts,js,vue}',
-      },
-    },
+    typeCheck: true,
   },
 });
