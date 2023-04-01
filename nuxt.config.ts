@@ -3,11 +3,7 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt', '@nuxtjs/color-mode', '@vueuse/nuxt'],
   typescript: {
     strict: true,
-    typeCheck: {
-      eslint: {
-        files: './**/*.{ts,js,vue}',
-      },
-    },
+    typeCheck: true,
   },
   postcss: {
     plugins: {
